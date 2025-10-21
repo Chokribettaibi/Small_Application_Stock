@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Stock Smartphones</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion de Stock Smartphones</h1>
+        <nav>
+            <button id="btn-ajouter">Ajouter</button>
+            <button id="btn-stock">Stock</button>
+            <button id="btn-ventes">Ventes</button>
+            <button id="btn-rapport">Rapport</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section Ajouter au Stock-->
+         <section id="section-ajouter" class="active">
+             <form id="form-ajout-stock">
+                 <input type="text" id="modele" placeholder="Modèle" required>
+                 <input type="text" id="marque" placeholder="Marque" required>
+                 <input type="number" id="prix-achat" placeholder="Prix d'achat" required>
+                 <input type="number" id="prix-vente" placeholder="Prix de vente" required>
+                 <button type="submit">Ajouter au stock</button>
+             </form>
+         </section>
+        <!-- Section Stock -->
+        <section id="section-stock" >
+            <h2>Gestion du Stock</h2>
+            <div id="liste-stock"></div>
+        </section>
+
+        <!-- Section Ventes -->
+        <section id="section-ventes">
+            <h2>Gestion des Ventes</h2>
+            <div id="liste-ventes"></div>
+        </section>
+
+        <!-- Section Rapport -->
+        <section id="section-rapport">
+            <h2>Rapport</h2>
+            <div id="rapport-stock">
+                <h3>État du stock</h3>
+                <div id="stock-actuel"></div>
+            </div>
+            <div id="rapport-ventes">
+                <h3>Historique des ventes</h3>
+                <div id="historique-ventes"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
