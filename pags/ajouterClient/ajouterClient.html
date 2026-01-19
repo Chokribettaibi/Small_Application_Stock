@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Détails client — Samir</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+ 
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="head">
+        <div class="back"><i class="bi bi-arrow-left"></i></div>
+        <div class="name">SAMIR</div>
+        <div style="width: 26px"></div>
+      </header>
+      <div class="subtitle">Cliquez pour les infos de contact</div>
+
+      <div class="card-balance">
+        <h6>Balance générale</h6>
+        <div class="balance-val">33.0 DT</div>
+      </div>
+
+      <div class="actions-row">
+        <div class="act text-center">
+          <div class="bubble">
+            <i class="bi bi-pencil" style="color: var(--blue)"></i>
+          </div>
+          <small>Note</small>
+        </div>
+        <div class="act text-center">
+          <div class="bubble">
+            <i class="bi bi-telephone" style="color: var(--blue)"></i>
+          </div>
+          <small>Appeler</small>
+        </div>
+        <div class="act text-center">
+          <div class="bubble">
+            <i class="bi bi-share" style="color: var(--blue)"></i>
+          </div>
+          <small>Parta...</small>
+        </div>
+        <div class="act text-center">
+          <div class="bubble">
+            <i class="bi bi-bell" style="color: var(--blue)"></i>
+          </div>
+          <small>Recouvrem...</small>
+        </div>
+        <div class="act text-center">
+          <div class="bubble">
+            <i class="bi bi-bar-chart" style="color: var(--blue)"></i>
+          </div>
+          <small>Rapp...</small>
+        </div>
+      </div>
+
+      <div class="ops-header">
+        <h6>
+          Opérations <span style="color: #9fb7cc; font-weight: 600">(2)</span>
+        </h6>
+        <div style="color: var(--red); font-weight: 700; cursor: pointer">
+          Déplacer vers les archives
+        </div>
+      </div>
+
+      <ul class="ops-list">
+        <li class="op-item">
+          <div class="op-icon">
+            <i class="bi bi-arrow-down" style="color: var(--blue)"></i>
+          </div>
+          <div class="op-main">
+            <div class="op-time">Aujourd'hui à 00:11</div>
+            <div class="op-sub">Balance 33.0 DT</div>
+          </div>
+          <div class="text-end">
+            <div class="op-amount green">55.0 DT</div>
+            <div class="op-sub">J'ai pris</div>
+          </div>
+        </li>
+
+        <li class="op-item">
+          <div class="op-icon">
+            <i class="bi bi-arrow-up" style="color: var(--blue)"></i>
+          </div>
+          <div class="op-main">
+            <div class="op-time">Aujourd'hui à 00:10</div>
+            <div class="op-sub">Balance 88.0 DT</div>
+          </div>
+          <div class="text-end">
+            <div class="op-amount red">88.0 DT</div>
+            <div class="op-sub">J'ai donné</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="bottom-actions">
+      <button class="btn btn-taken">J'AI PRIS</button>
+      <button class="btn btn-given">J'AI DONNÉ</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // actions demo
+      document.querySelector(".back").addEventListener("click", () => {
+        history.back();
+      });
+      document.querySelectorAll(".act").forEach((a) =>
+        a.addEventListener("click", () => {
+          alert("Action (démo)");
+        }),
+      );
+      document
+        .querySelector(".btn-taken")
+        .addEventListener("click", () => alert("J'ai pris (démo)"));
+      document
+        .querySelector(".btn-given")
+        .addEventListener("click", () => alert("J'ai donné (démo)"));
+    </script>
+  </body>
+</html>

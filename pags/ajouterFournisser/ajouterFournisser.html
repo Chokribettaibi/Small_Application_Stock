@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ajouter Fournisseur</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+   <link rel="stylesheet" href="style.css"> 
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="back"><i class="bi bi-arrow-left"></i></div>
+        <div class="title">AJOUTER FOURNISSEUR</div>
+        <div style="width: 28px"></div>
+      </header>
+
+      <div class="mb-3">
+        <label class="form-label">NOM</label>
+        <input class="form-control" placeholder="Nom" />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">NUMÉRO DE TÉLÉPHONE</label>
+        <div class="phone-row">
+          <button class="country-btn" type="button">
+            🇹🇳 <strong>+216</strong>
+          </button>
+          <input class="form-control" placeholder="Numéro de téléphone" />
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">ADRESSE</label>
+        <div class="address-input">
+          <input class="form-control" placeholder="Adresse" />
+          <div class="chev"><i class="bi bi-chevron-right"></i></div>
+        </div>
+      </div>
+
+      <div class="card-tags">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="card-title">Tags</div>
+          <button class="add-tags-btn">
+            <i class="bi bi-plus-lg me-1"></i>Ajouter tags
+          </button>
+        </div>
+        <p>
+          Utilisez des tags personnalisés (ex. : VIP, Grossiste, Région) pour
+          classer vos contacts et les filtrer facilement
+        </p>
+      </div>
+    </div>
+
+    <div class="confirm">
+      <button class="btn" id="confirmBtn">CONFIRMER</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // interactions basiques
+      document
+        .getElementById("confirmBtn")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          alert("Formulaire envoyé (démo)");
+        });
+    </script>
+  </body>
+</html>

@@ -1,59 +1,116 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion Stock Smartphones</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Gestion de Stock Smartphones</h1>
-        <nav>
-            <button id="btn-ajouter">Ajouter</button>
-            <button id="btn-stock">Stock</button>
-            <button id="btn-ventes">Ventes</button>
-            <button id="btn-rapport">Rapport</button>
-        </nav>
-    </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Potentat Pro — Clients</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <header class="topbar">
+          <div class="logo">
+            <i
+              class="bi bi-journal-bookmark"
+            ></i
+            ><span>Potentat Pro</span>
+          </div>
+          <div class="icon-row">
+            <div class="square"><i class="bi bi-phone"></i></div>
+            <div class="square"><i class="bi bi-eye-slash"></i></div>
+            <div class="square"><i class="bi bi-youtube"></i></div>
+          </div>
+        </header>
+  
+        <div class="tabs">
+          <button id="tabClients" class="btn btn-light active">
+            <i class="bi bi-person-fill me-2"></i>CLIENTS
+          </button>
+          <button id="tabFourn" class="btn btn-outline-secondary">
+            <i class="bi bi-truck me-2"href="pags/ajouterFournisser.html"></i>FOURNISSEURS
+          </button>
+        </div>
+      </header>
 
-    <main>
-        <!-- Section Ajouter au Stock-->
-         <section id="section-ajouter" class="active">
-             <form id="form-ajout-stock">
-                 <input type="text" id="modele" placeholder="Modèle" required>
-                 <input type="text" id="marque" placeholder="Marque" required>
-                 <input type="number" id="prix-achat" placeholder="Prix d'achat" required>
-                 <input type="number" id="prix-vente" placeholder="Prix de vente" required>
-                 <button type="submit">Ajouter au stock</button>
-             </form>
-         </section>
-        <!-- Section Stock -->
-        <section id="section-stock" >
-            <h2>Gestion du Stock</h2>
-            <div id="liste-stock"></div>
-        </section>
+      <div class="summary d-flex align-items-center">
+        <div class="amounts">
+          <div>J'ai pris</div>
+          <div class="take">0.0 DT</div>
+          <div style="height: 6px"></div>
+          <div>J'ai donné</div>
+          <div class="give">0.0 DT</div>
+        </div>
+        <div class="summary-actions">
+          <div class="square">
+            <i class="bi bi-bell" style="color: var(--blue)"></i>
+          </div>
+          <div class="square">
+            <i class="bi bi-bar-chart" style="color: var(--blue)"></i>
+          </div>
+        </div>
+      </div>
 
-        <!-- Section Ventes -->
-        <section id="section-ventes">
-            <h2>Gestion des Ventes</h2>
-            <div id="liste-ventes"></div>
-        </section>
+      <div class="clients-header">
+        <h5 style="color: var(--blue); margin: 0">
+          Clients <span class="muted">(0)</span>
+        </h5>
+      </div>
 
-        <!-- Section Rapport -->
-        <section id="section-rapport">
-            <h2>Rapport</h2>
-            <div id="rapport-stock">
-                <h3>État du stock</h3>
-                <div id="stock-actuel"></div>
-            </div>
-            <div id="rapport-ventes">
-                <h3>Historique des ventes</h3>
-                <div id="historique-ventes"></div>
-            </div>
-        </section>
-    </main>
+      <div class="search-row">
+        <input type="search" class="form-control" placeholder="Recherche" />
+        <div class="square">
+          <i class="bi bi-filter" style="color: var(--blue)"></i>
+        </div>
+        <div class="square">
+          <i class="bi bi-file-earmark-pdf" style="color: var(--blue)"></i>
+        </div>
+      </div>
 
-    <script src="js/app.js"></script>
-</body>
+      <div class="illustr">
+
+        <img
+          src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='160' viewBox='0 0 260 160'><rect rx='20' width='260' height='160' fill='%23f6fbff'/><g transform='translate(20,18)'><rect width='220' height='110' rx='14' fill='%23ffffff' stroke='%23cfeafc' stroke-width='4'/><circle cx='40' cy='50' r='12' fill='%23ffd54a'/><circle cx='70' cy='25' r='8' fill='%23ffd54a'/><path d='M120 30 L150 30' stroke='%23ff6b6b' stroke-width='6' stroke-linecap='round'/><path d='M120 60 L150 60' stroke='%232fb66b' stroke-width='6' stroke-linecap='round'/></g></svg>"
+          alt="illustration"
+        />
+        <div class="empty-text">
+          Aucun client pour le moment.<br />Ajoutez des clients pour commencer à
+          gérer les crédits
+        </div>
+      </div>
+
+      <a class="fab" href="#" role="button"
+        ><i class="bi bi-person-plus" style="font-size: 18px"></i> Ajouter
+        client</a
+      >
+    </div>
+
+    <nav class="bottom-nav">
+      <div class="nav">
+        <div class="text-center">
+          <i class="bi bi-journal" style="color: var(--blue)"></i>
+          <div style="font-size: 12px; color: var(--blue)">Carnet Crédit</div>
+        </div>
+        <div class="text-center">
+          <i class="bi bi-wallet2 muted"></i>
+          <div style="font-size: 12px" class="muted">Carnet Caisse</div>
+        </div>
+        <div class="text-center">
+          <i class="bi bi-grid-3x3-gap muted"></i>
+          <div style="font-size: 12px" class="muted">Profil</div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
